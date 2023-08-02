@@ -95,6 +95,38 @@
 			"response": []
 		},
 		{
+			"name": "UpdateUser",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Dima\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/users/64c991e7d610b56db01be0d2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"64c991e7d610b56db01be0d2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "CreateBook",
 			"request": {
 				"method": "POST",
@@ -165,6 +197,38 @@
 					"port": "8080",
 					"path": [
 						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateBook",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Harry Potter\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/books/64c995511439e3d34e4c2073",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"64c995511439e3d34e4c2073"
 					]
 				}
 			},
@@ -243,6 +307,38 @@
 						"comments",
 						"book",
 						"64c995511439e3d34e4c2073"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateComment",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n     \"body\": \"modified\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/comments/64c9975a8742d1f6d3a4ffed",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"comments",
+						"64c9975a8742d1f6d3a4ffed"
 					]
 				}
 			},
@@ -331,7 +427,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\":\"Gucfi\",\n    \"email\":\"tesst@gmail.com\",\n    \"password\":\"testpass\"\n}",
+					"raw": "{\n    \"name\":\"Gudi\",\n    \"email\":\"tesst@gmail.com\",\n    \"password\":\"testpass\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -339,7 +435,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:8080/writers/64c990f5762df3a1cba9c9d8",
+					"raw": "http://127.0.0.1:8080/writers/64c99d23f7e0429bf4dd74c2",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -350,26 +446,63 @@
 					"port": "8080",
 					"path": [
 						"writers",
-						"64c990f5762df3a1cba9c9d8"
+						"64c99d23f7e0429bf4dd74c2"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "UpdateUser",
+			"name": "DeleteComment",
 			"request": {
-				"method": "PUT",
+				"method": "DELETE",
 				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"name\":\"Dima\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/comments/64c9975a8742d1f6d3a4ffed",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"comments",
+						"64c9975a8742d1f6d3a4ffed"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteBook",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/books/64c995511439e3d34e4c2073",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"64c995511439e3d34e4c2073"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteUser",
+			"request": {
+				"method": "DELETE",
+				"header": [],
 				"url": {
 					"raw": "http://127.0.0.1:8080/users/64c991e7d610b56db01be0d2",
 					"protocol": "http",
@@ -383,6 +516,29 @@
 					"path": [
 						"users",
 						"64c991e7d610b56db01be0d2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteWriter",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/writers/64c990f5762df3a1cba9c9d8",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"writers",
+						"64c990f5762df3a1cba9c9d8"
 					]
 				}
 			},
